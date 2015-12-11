@@ -1,10 +1,12 @@
 """
+Script to generate an email containing the current IP address
+"""
+
 __author__ = 'Cody Giles'
 __license__ = "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 __version__ = "1.0"
 __maintainer__ = "Cody Giles"
 __status__ = "Production"
-"""
 
 import subprocess
 import smtplib
