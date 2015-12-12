@@ -27,6 +27,25 @@ and another...
 >>> get_ip('eth0')
 '10.80.40.234'
 >>> 
+
+
+and yet another...
+You can use the netifaces module. Just type:
+
+easy_install netifaces
+in your command shell and it will install itself on default Python installation.
+
+Then you can use it like this:
+
+from netifaces import interfaces, ifaddresses, AF_INET
+for ifaceName in interfaces():
+    addresses = [i['addr'] for i in ifaddresses(ifaceName).setdefault(AF_INET, [{'addr':'No IP addr'}] )]
+    print '%s: %s' % (ifaceName, ', '.join(addresses))
+On my computer it printed:
+
+{45639BDC-1050-46E0-9BE9-075C30DE1FBC}: 192.168.0.100
+{D43A468B-F3AE-4BF9-9391-4863A4500583}: 10.5.9.207
+
 """
 
 __author__ = 'Cody Giles'
