@@ -1,6 +1,13 @@
 # /env/python
 """
 Script to generate an email containing the current IP address
+
+here is a code found on stackexchange to locate the IP of the running instance
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.connect(('8.8.8.8', 80))
+print(s.getsockname()[0])
+s.close()
 """
 
 __author__ = 'Cody Giles'
